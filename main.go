@@ -4,6 +4,20 @@ import (
 	"fmt"
 )
 
+/*
+# 格式：git submodule add <共享仓库远程地址> <本地子目录路径>
+git submodule add https://github.com/yourusername/shared-files.git shared
+
+# 初始化子模块配置（读取 .gitmodules 并更新主仓库的 .git/config）
+git submodule init
+
+# 拉取子模块的文件内容（根据配置检出对应的 commit）
+git submodule update
+
+# 设置自动拉取
+git config --local submodule.recurse true
+*/
+
 func main() {
 	fmt.Println("日志 1: 程序开始执行")
 	fmt.Println("日志 2: 初始化完成")
